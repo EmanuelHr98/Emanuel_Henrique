@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="login.css" />
   <title>Login</title>  
 </head>
 <body>
   <div class="container">
   <main>
-    <form action="./formulario.html" method="post">
+    <form method="post">
       <h1>Login</h1>
       <div class="inputs">
           <input
@@ -26,8 +27,50 @@
               required
           />
       </div>
-      <input type="submit" value="Realizar login" />
+      <input type="submit" value="Realizar login" id="entrar"/>
   </form>
   </main>
 </div>
+<script>
+
+    user = document.getElementById("username")
+    password = document.getElementById("password")
+
+    btnLogin = document.getElementById("entrar").addEventListener("click", function(){
+        if(user.value == "adm" && password.value == "123"){
+            alert("Entrou")
+        }else{
+            alert("Tente de novo")
+        }
+    })
+    
+
+    allElement = document.querySelectorAll("*")
+    allElement.forEach(element => {
+        
+        var letters = "0123456789ABCDEF"
+        var color2 = "#"
+
+        for(let i = 0; i < 6; i++){
+            color2 += letters[Math.floor(Math.random() * 16)]
+        }
+
+        //element.style.color = color2
+        element.style.backgroundColor = color2
+    });
+
+
+    function getRandomColor(){
+
+        var letters = "0123456789ABCDEF"
+        var color = "#"
+
+        for(let i = 0; i < 6; i++){
+            color += letters[Math.floor(Math.random() * 16)]
+        }
+
+        return color 
+
+    }
+</script>
 </body>
