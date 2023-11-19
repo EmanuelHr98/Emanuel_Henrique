@@ -1,3 +1,7 @@
+<!--login usuário: adm / senha: 123
+Pagina nova 
+Foi feito um js para quando o usuario clica em login sem preencher nenhuma informação
+ser gerado cores randomicas na tela.-->
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -27,6 +31,7 @@
               required
           />
       </div>
+      
       <input type="submit" value="Realizar login" id="entrar"/>
   </form>
   </main>
@@ -41,16 +46,14 @@
         }else{
             alert("Tente de novo")
         }
-    })
 
-    allElement = document.querySelectorAll("*")
-    allElement.forEach(element => {
-        element.style.color = getRandomColor()
-        element.style.backgroundColor = getRandomColor()
-    });
+        allElement = document.querySelectorAll("*")
+        allElement.forEach(element => {
+            element.style.color = getRandomColor()
+            element.style.backgroundColor = getRandomColor()
+        });
 
-
-    function getRandomColor(){
+        function getRandomColor(){
         var letters = "0123456789ABCDEF"
         var color = "#"
 
@@ -60,5 +63,8 @@
 
         return color 
     }
+
+    })
+   
 </script>
 </body>
