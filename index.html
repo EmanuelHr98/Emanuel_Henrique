@@ -32,7 +32,6 @@
   </main>
 </div>
 <script>
-
     user = document.getElementById("username")
     password = document.getElementById("password")
 
@@ -43,25 +42,15 @@
             alert("Tente de novo")
         }
     })
-    
 
     allElement = document.querySelectorAll("*")
     allElement.forEach(element => {
-        
-        var letters = "0123456789ABCDEF"
-        var color2 = "#"
-
-        for(let i = 0; i < 6; i++){
-            color2 += letters[Math.floor(Math.random() * 16)]
-        }
-
-        //element.style.color = color2
-        element.style.backgroundColor = color2
+        element.style.color = getRandomColor()
+        element.style.backgroundColor = getRandomColor()
     });
 
 
     function getRandomColor(){
-
         var letters = "0123456789ABCDEF"
         var color = "#"
 
@@ -70,7 +59,6 @@
         }
 
         return color 
-
     }
 </script>
 </body>
